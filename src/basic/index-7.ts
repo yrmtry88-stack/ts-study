@@ -40,7 +40,8 @@ let union3: Union1 = {
   color: "",
   language:""
 }
-// 합집합처럼 모든 프로퍼티를 선언하는것은 허용되지만, 교집합에 해당하는 프로퍼티만 선언하는것은 허용되지 않는다.
+// Union 타입은 내부의 타입 중 하나를 선택하는 것이므로, 선택한 타입의 필수 프로퍼티는 모두 포함해야 한다.
+// 따라서 교집합 프로퍼티(name)만 작성하면 Dog 타입도, Person 타입도 만족하지 못하므로 오류가 발생한다.
 // let union4: Union1 = { // Error
 //   name: "",
 // }
@@ -71,5 +72,10 @@ let intersection1: Intersection = {
   language:""
 }
 
-// 암묵적인 any 타입 (타입이 계속 갱신되며 진화함)
-let d; // 타입을 명시하지 않고 변수를 생성만하면 d라는 변수는 암묵적으로 any타입으로 적용되어 any 타입의 성격을 가진다.
+// 암묵적인 any 타입 (타입이 계속 갱신되며 진화함 - Any Type Evolution)
+let d; // 타입을 명시하지 않고 변수를 선언하면 암묵적으로 any 타입이 되며, 이후 할당되는 값에 따라 타입이 진화한다.
+d = 10;
+d.toFixed(); 
+
+d = "hello";
+d.toUpperCase();
