@@ -5,7 +5,8 @@
     "outDir":"dist",
     "skipLibCheck": true,
     "strict": true,
-    "moduleDetection":"force"
+    "moduleDetection":"force",
+    "allowJs": true
   },
   "include": ["src/basic"]
 }
