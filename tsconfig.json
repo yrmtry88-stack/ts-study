@@ -8,5 +8,5 @@
     "moduleDetection":"force",
     "allowJs": true
   },
-  "include": ["src/basic"]
+  "include": ["src/basic", "src/utility-type", "src/middle", "src/types-class"]
 }
